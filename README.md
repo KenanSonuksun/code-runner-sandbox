@@ -46,16 +46,6 @@ with strict resource limits, preventing any impact on the host system.
 
 --------------------------------------------------
 
-Execution Flow
-
-Compile:
-javac /workspace/Main.java
-
-Run:
-java -cp /workspace Main
-
---------------------------------------------------
-
 ## API
 
 POST /api/code/run
