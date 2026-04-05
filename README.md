@@ -51,17 +51,19 @@ with strict resource limits, preventing any impact on the host system.
 POST /api/code/run
 
 Request:
+```json
 {
   "className": "Main",
-  "sourceCode": "public class Main { public static void main(String[] args) { System.out.println(\"Hello\"); } }",
+  "sourceCode": "public class Main { public static void main(String[] args) { System.out.println(\"Test Message\"); } }",
   "stdin": ""
 }
+```
 
 Response:
 ```json
 {
   "status": "SUCCESS",
-  "stdout": "Hello",
+  "stdout": "Test Message",
   "stderr": "",
   "exitCode": 0
 }
