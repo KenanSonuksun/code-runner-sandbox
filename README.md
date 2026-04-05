@@ -6,7 +6,7 @@
 
 --------------------------------------------------
 
-Overview
+## Overview
 
 A secure Java code execution sandbox built with Spring Boot and Docker.
 
@@ -15,7 +15,7 @@ with strict resource limits, preventing any impact on the host system.
 
 --------------------------------------------------
 
-Features
+## Features
 
 - Dynamic Java code execution
 - Docker-based isolation
@@ -56,7 +56,7 @@ java -cp /workspace Main
 
 --------------------------------------------------
 
-API
+## API
 
 POST /api/code/run
 
@@ -78,7 +78,7 @@ Response:
 ```
 --------------------------------------------------
 
-Sandbox Security
+## Sandbox Security
 
 - Container isolation
 - Separate JVM for user code
@@ -102,7 +102,7 @@ Key Concepts
 
 --------------------------------------------------
 
-Future Improvements
+## Future Improvements
 
 - Queue / worker architecture
 - Output size restriction
@@ -113,7 +113,7 @@ Future Improvements
 
 --------------------------------------------------
 
-Conclusion
+## Conclusion
 
 This project demonstrates how to build a secure, isolated, and controlled
 code execution system using Docker and Java.
