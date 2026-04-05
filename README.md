@@ -3,29 +3,33 @@
 ![Java](https://img.shields.io/badge/Java-21-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green)
 ![Docker](https://img.shields.io/badge/Docker-Sandbox-blue)
+![Status](https://img.shields.io/badge/status-learning--project-orange)
 
-## 📌 Overview
+--------------------------------------------------
 
-A **secure Java code execution sandbox** built with Spring Boot and Docker.
+📌 Overview
 
-It executes user-submitted code in an **isolated container environment** with strict resource limits to safely handle untrusted code.
+A secure Java code execution sandbox built with Spring Boot and Docker.
 
----
+This system executes user-submitted code in an isolated container environment
+with strict resource limits, preventing any impact on the host system.
 
-## Features
+--------------------------------------------------
+
+🚀 Features
 
 - Dynamic Java code execution
 - Docker-based isolation
-- Separate **compile & run phases**
-- STDIN / STDOUT / STDERR support
+- Separate compile & run phases
+- STDIN / STDOUT / STDERR handling
 - Timeout protection
-- Automatic cleanup
-- Resource limits (CPU & Memory)
+- Automatic workspace cleanup
+- CPU & Memory limits
 - Network disabled sandbox
 
----
+--------------------------------------------------
 
-## Architecture
+🏗️ Architecture
 
 Client
 ↓
@@ -33,58 +37,108 @@ Spring Boot API
 ↓
 Service Layer
 ↓
-Workspace (temp dir)
+Workspace (temp directory)
 ↓
 Docker Container
-→ Compile (javac)
-→ Run (java)
+  → Compile (javac)
+  → Run (java)
 ↓
 Response
 
----
+--------------------------------------------------
 
-## API
+⚙️ Execution Flow
 
-### POST `/api/code/run`
+Compile:
+javac /workspace/Main.java
 
-```json
+Run:
+java -cp /workspace Main
+
+--------------------------------------------------
+
+📥 API
+
+POST /api/code/run
+
+Request:
 {
   "className": "Main",
-  "sourceCode": "...",
+  "sourceCode": "public class Main { public static void main(String[] args) { System.out.println(\"Hello\"); } }",
   "stdin": ""
 }
-```
 
-* Sandbox Security
-	•	Container isolation
-	•	--memory & --cpus limits
-	•	--network=none
-	•	Read-only filesystem
-	•	Limited processes
-	•	No privilege escalation
+Response:
+{
+  "status": "SUCCESS",
+  "stdout": "Hello",
+  "stderr": "",
+  "exitCode": 0
+}
 
-⸻
+--------------------------------------------------
 
-* Key Concepts
-	•	Sandbox architecture
-	•	Process & container isolation
-	•	Resource control
-	•	Secure code execution
-	•	JVM vs container separation
+🔐 Sandbox Security
 
-⸻
+- Container isolation
+- Separate JVM for user code
+- CPU limit (--cpus=1)
+- Memory limit (--memory=256m)
+- Network disabled (--network=none)
+- Read-only filesystem
+- No privilege escalation
+- Process limit protection
 
-* Limitations
-	•	No queue system
-	•	No output size limit
-	•	Not production-ready
+--------------------------------------------------
 
-⸻
+🧠 Key Concepts
 
-* Future Improvements
-	•	Worker/queue system
-	•	Multi-language support
-	•	Execution metrics
-	•	Rate limiting
+- Sandbox architecture
+- Process & container isolation
+- Resource management
+- Secure execution of untrusted code
+- JVM vs container separation
+- Compile vs runtime error handling
 
-⸻
+--------------------------------------------------
+
+⚠️ Limitations
+
+- No output size limitation
+- No job queue system
+- No concurrency control
+- Not production-ready
+
+--------------------------------------------------
+
+🔮 Future Improvements
+
+- Queue / worker architecture
+- Output size restriction
+- Multi-language support
+- Execution metrics
+- Rate limiting
+- Container reuse optimization
+
+--------------------------------------------------
+
+🎯 Use Cases
+
+- Online coding platforms
+- Technical interview systems
+- Learning environments
+- AI code execution tools
+- Plugin systems
+
+--------------------------------------------------
+
+📌 Conclusion
+
+This project demonstrates how to build a secure, isolated, and controlled
+code execution system using Docker and Java.
+
+Focus areas:
+- Untrusted code execution
+- Resource control
+- System isolation
+- Backend system design
