@@ -30,19 +30,19 @@ Features
 
 ## Architecture
 
-Client
-↓
-Spring Boot API
-↓
-Service Layer
-↓
-Workspace (temp directory)
-↓
-Docker Container
-  → Compile (javac)
-  → Run (java)
-↓
-Response
+- Client  
+  ↓  
+- Spring Boot API  
+  ↓  
+- Service Layer  
+  ↓  
+- Workspace (temp directory)  
+  ↓  
+- Docker Container  
+  - Compile (javac)  
+  - Run (java)  
+  ↓  
+- Response
 
 --------------------------------------------------
 
