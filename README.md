@@ -3,11 +3,10 @@
 ![Java](https://img.shields.io/badge/Java-21-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green)
 ![Docker](https://img.shields.io/badge/Docker-Sandbox-blue)
-![Status](https://img.shields.io/badge/status-learning--project-orange)
 
 --------------------------------------------------
 
-📌 Overview
+Overview
 
 A secure Java code execution sandbox built with Spring Boot and Docker.
 
@@ -16,7 +15,7 @@ with strict resource limits, preventing any impact on the host system.
 
 --------------------------------------------------
 
-🚀 Features
+Features
 
 - Dynamic Java code execution
 - Docker-based isolation
@@ -29,7 +28,7 @@ with strict resource limits, preventing any impact on the host system.
 
 --------------------------------------------------
 
-🏗️ Architecture
+Architecture
 
 Client
 ↓
