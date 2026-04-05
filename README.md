@@ -3,7 +3,6 @@
 ![Java](https://img.shields.io/badge/Java-21-blue)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3-green)
 ![Docker](https://img.shields.io/badge/Docker-Sandbox-blue)
-![Status](https://img.shields.io/badge/status-learning--project-orange)
 
 ## 📌 Overview
 
