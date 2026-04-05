@@ -28,25 +28,25 @@ Features
 
 --------------------------------------------------
 
-Architecture
+## Architecture
 
--Client
+Client
 ↓
--Spring Boot API
+Spring Boot API
 ↓
--Service Layer
+Service Layer
 ↓
--Workspace (temp directory)
+Workspace (temp directory)
 ↓
--Docker Container
+Docker Container
   → Compile (javac)
   → Run (java)
 ↓
--Response
+Response
 
 --------------------------------------------------
 
-⚙️ Execution Flow
+Execution Flow
 
 Compile:
 javac /workspace/Main.java
@@ -56,7 +56,7 @@ java -cp /workspace Main
 
 --------------------------------------------------
 
-📥 API
+API
 
 POST /api/code/run
 
@@ -68,16 +68,17 @@ Request:
 }
 
 Response:
+```json
 {
   "status": "SUCCESS",
   "stdout": "Hello",
   "stderr": "",
   "exitCode": 0
 }
-
+```
 --------------------------------------------------
 
-🔐 Sandbox Security
+Sandbox Security
 
 - Container isolation
 - Separate JVM for user code
@@ -90,7 +91,7 @@ Response:
 
 --------------------------------------------------
 
-🧠 Key Concepts
+Key Concepts
 
 - Sandbox architecture
 - Process & container isolation
@@ -101,16 +102,7 @@ Response:
 
 --------------------------------------------------
 
-⚠️ Limitations
-
-- No output size limitation
-- No job queue system
-- No concurrency control
-- Not production-ready
-
---------------------------------------------------
-
-🔮 Future Improvements
+Future Improvements
 
 - Queue / worker architecture
 - Output size restriction
@@ -121,17 +113,7 @@ Response:
 
 --------------------------------------------------
 
-🎯 Use Cases
-
-- Online coding platforms
-- Technical interview systems
-- Learning environments
-- AI code execution tools
-- Plugin systems
-
---------------------------------------------------
-
-📌 Conclusion
+Conclusion
 
 This project demonstrates how to build a secure, isolated, and controlled
 code execution system using Docker and Java.
