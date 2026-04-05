@@ -83,7 +83,7 @@ Response:
 
 --------------------------------------------------
 
-Key Concepts
+## Key Concepts
 
 - Sandbox architecture
 - Process & container isolation
